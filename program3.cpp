@@ -102,6 +102,7 @@ int main()
 		printf("%d ", seq[lis[i]]);
         printf("\n");	
 	findLDS(arr, n);
+        printf("\n");	
 
 	return 0;
 }
