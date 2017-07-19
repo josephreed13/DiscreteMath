@@ -3,9 +3,9 @@
  
 using namespace std;
  
-#define SET_SIZE 5
+#define SET_SIZE 4
  
-int set[] = {1, 2, 3, 4, 5};
+int set[] = {1, 2, 3, 4};
 vector<vector<int> > all_combinations;
 const int tuple_size = 3;
  

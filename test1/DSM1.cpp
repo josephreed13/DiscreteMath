@@ -24,6 +24,13 @@ void WordPermutation(string prefix, string word)
         for (int i = 0; i < n; i++)
         {
   WordPermutation(prefix + word[i],word.substr(0, i) + word.substr(i + 1, n - (i+1)));
+        cout<< i << endl;
+
+
+
+
+
+
         }
     }
 }
