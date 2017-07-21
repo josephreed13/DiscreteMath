@@ -48,4 +48,4 @@ int main() {
 // 1 = yes
 // 0 = no
 // find percentage of 1's 
-// compare percentage with Theorem 
+// compare percentage with percentage from theorem (61%) 
