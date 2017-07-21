@@ -42,3 +42,10 @@ int main() {
 
 	return 0;
 }
+
+
+// store thousands of results of tests in a large array
+// 1 = yes
+// 0 = no
+// find percentage of 1's 
+// compare percentage with Theorem 
