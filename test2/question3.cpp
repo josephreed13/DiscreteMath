@@ -41,10 +41,10 @@ void calculate(int size, int range) {
 		// run x and y through Euclid's algorithm
 		result = gcd(x,y);
 		
-		// result > 1, the numbers are not relatively prime
+		// result > 1, the numbers are not relatively prime - store 0
 		if(result > 1) {
 			a[i] = 0;
-		// result = 1, the numbers are relatively prime
+		// result = 1, the numbers are relatively prime - store 1
 		} else {
 			a[i] = 1;
 		}
@@ -85,6 +85,6 @@ int main() {
 		// try different sizes
 		size = size * 10;
 	}
-	
+
 	return 0;
 }
