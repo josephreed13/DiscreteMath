@@ -1,18 +1,19 @@
 #include<iostream>
+#include<iomanip>
 using namespace std;
 long fnpr(int, int);
 long fncr(int, int);
 long factorial(int);
-void RoyalFlush(long);
-void StraightFlush(long,long);
-void FourOfAKind(long,long,long);
-void FullHouse(long,long,long,long);
-void Flush(long,long,long);
-void Straight(long,long);
-void Three(long,long,long,long);
-void Two(long,long,long,long);
-void One(long,long,long,long);
-void High(long,long);
+void RoyalFlush(long,long);
+void StraightFlush(long,long,long);
+void FourOfAKind(long,long,long,long);
+void FullHouse(long,long,long,long,long);
+void Flush(long,long,long,long);
+void Straight(long,long,long);
+void Three(long,long,long,long,long);
+void Two(long,long,long,long,long);
+void One(long,long,long,long,long);
+void High(long,long,long);
 
 
 int main()
@@ -24,6 +25,7 @@ int main()
 // cout<<"Enter the value of r : ";
 //cin>>r;
 // ncr=fncr(n,r);
+ double allpossible = 2598960.0;
  long fourone = fncr(4,1);
  long tenone = fncr(10,1);
  long lone = fncr(11,1);
@@ -35,16 +37,16 @@ int main()
  long fourtwo = fncr(4,2);
  long thrfive = fncr(13,5);
  long thrtwo = fncr(13,2);
- RoyalFlush(fourone);
- StraightFlush(tenone,fourone);
- FourOfAKind(thrteen,tweleveone,fourone);
- FullHouse(thrteen,fourthree,tweleveone,fourtwo);
- Flush(thrfive,fourone,tenone);
- Straight(tenone,fourone);
- Three(thrteen,fourthree,twelevetwo,fourone); 
- Two(thrtwo,fourtwo,lone,fourone);
- One(thrteen,fourtwo,twelevethree,fourone);
- High(thrfive,fourone);
+ RoyalFlush(allpossible,fourone);
+ StraightFlush(allpossible,tenone,fourone);
+ FourOfAKind(allpossible,thrteen,tweleveone,fourone);
+ FullHouse(allpossible,thrteen,fourthree,tweleveone,fourtwo);
+ Flush(allpossible,thrfive,fourone,tenone);
+ Straight(allpossible,tenone,fourone);
+ Three(allpossible,thrteen,fourthree,twelevetwo,fourone); 
+ Two(allpossible,thrtwo,fourtwo,lone,fourone);
+ One(allpossible,thrteen,fourtwo,twelevethree,fourone);
+ High(allpossible,thrfive,fourone);
  
  //npr=fnpr(n,r);
 
@@ -72,52 +74,52 @@ long factorial(int n)
  return(n*factorial(n-1));
  }
 }
-void RoyalFlush(long value){
+void RoyalFlush(long a,long value){
 	cout << "Royal Flush No. of Ways " << value << endl;
-	cout << "Probability is .000002 " << endl;
+	cout << "Probability is " << (((double)value/a)*100) << endl;
 }
-void StraightFlush(long value1,long value2){
+void StraightFlush(long a,long value1,long value2){
 	long value = ((value1*value2)-value2);
 	cout << "StraightFlush Flush No. of Ways " << value << endl;
-	cout << "Probability is 0.000015" << endl;
+	cout << "Probability is " << (((double)value/a)*100) << endl;
 }
-void FourOfAKind(long value1, long value2, long value3){
+void FourOfAKind(long a,long value1, long value2, long value3){
 	long value = value1 * value2 * value3;
 	cout << "Four of a kind No. of Ways " << value << endl;
-	cout << "Probability is 0.000240" << endl;
+	cout << "Probability is " << (((double)value/a)*100) << endl;
 }
-void FullHouse(long value1, long value2, long value3,long value4){
+void FullHouse(long a,long value1, long value2, long value3,long value4){
 	long value = value1 * value2 * value3 * value4;
 	cout << "Full House No. of Ways " << value << endl;
-	cout << "Probability is 0.001441" << endl;
+	cout << "Probability is " << (((double)value/a)*100) << endl;
 }
-void Flush(long value1,long value2, long value3){
+void Flush(long a,long value1,long value2, long value3){
 	long value = ((value1*value2)-(value3*value2));
 	cout << "Flush No. of Ways " << value << endl;
-	cout << "Probability is 0.001965" << endl;
+	cout << "Probability is " << (((double)value/a)*100) << endl;
 }
-void Straight(long value1,long value2){
+void Straight(long a,long value1,long value2){
 	long value = ((value1*(value2*value2*value2*value2*value2)) - (value1*value2));
 	cout << "Straight No. of Ways " << value << endl;
-	cout << "Probability is 0.003925" << endl;
+	cout << "Probability is " << (((double)value/a)*100) << endl;
 }
-void Three(long value1,long value2,long value3,long value4){
+void Three(long a,long value1,long value2,long value3,long value4){
 	long value = (value1 * value2 * value3 * (value4*value4));
 	cout << "Three of a Kind No. of Ways " << value << endl;
-	cout << "Probability is 0.021129" << endl;
+	cout << "Probability is " << (((double)value/a)*100) << endl;
 }
-void Two(long value1,long value2, long value3, long value4){
+void Two(long a,long value1,long value2, long value3, long value4){
 	long value = (value1*(value2*value2)*value3*value4);
 	cout << "Two of a Kind " << value << endl;
-	cout << "Probability is 0.021129" << endl;
+	cout << "Probability is " << (((double)value/a)*100) << endl;
 }
-void One(long value1,long value2, long value3, long value4){
+void One(long a,long value1,long value2, long value3, long value4){
 	long value = (value1*value2*value3*(value4*value4*value4));
 	cout << "One of a kind No. of Ways " << value << endl;
-	cout << "Probability is 0.422569" << endl;
+	cout << "Probability is " << (((double)value/a)*100) << endl;
 }
-void High(long value1, long value2){
+void High(long a,long value1, long value2){
 	long value = ((value1 - 10)*((value2*value2*value2*value2*value2)-4));
 	cout << "No pair/ High Card No. of Ways " << value << endl;
-	cout << "Probability is 0.501177" << endl;
+	cout << "Probability is " << (((double)value/a)*100) << endl;
 }
