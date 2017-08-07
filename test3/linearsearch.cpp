@@ -1,6 +1,6 @@
 // Linear Search algorithm
 
-int linearSearch(int a[], int size, int key){
+int linearSearch(int a[], int size, int key) {
   
 	for(int i=0; i < size; i++){
 		if(key == a[i]){
